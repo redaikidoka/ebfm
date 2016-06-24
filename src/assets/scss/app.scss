@@ -41,3 +41,74 @@
 
 @include motion-ui-transitions;
 @include motion-ui-animations;
+
+nav#simpletop {
+	background-color: $white ;
+	margin: 0;
+	width: 100%;
+	max-width: 100%;
+	.dropdown.menu .submenu{
+		border: none !important;
+		box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.5) ;
+		width: 15rem;
+	}
+	.menu > li {
+		line-height: calc-rem(17);
+	}
+	.menu > li > a {
+		font-weight: bold;
+		font-size: $menu-font-size;
+	}
+
+}
+
+h1.pagetitle {
+	color: rgba( 156, 104, 136, 0.9);
+	font-weight: bold;
+	font-size: 28px;
+	margin-top: 8px;
+	font-variant: small-caps;
+}
+
+div.jumbotron {
+	background-color: #BA93AB;
+	color: $white;
+	box-shadow: 0px 2px 4px rgba (0,0,0,0.5);
+	border-radius: 25px;
+	margin: 5px 20px 25px 20px;
+
+	h2 {
+		text-align: center;
+		font-weight: bold;
+	}
+
+	h3 {
+		text-align: center;
+		font-weight: bold;
+		text-transform: uppercase;
+	}
+
+	h4 {
+		color: #595858;
+		text-align: center;
+		font-size: 18px;
+	}
+
+	label {
+		color: $white;
+		texa-align: center;
+		font-style: italic;
+	}
+
+	img {
+		width: 100%;
+		margin-top: 10px;
+		border-radius: 15px;
+	}
+}
+
+.tabs-title > a:hover, .tabs-title > a:focus, .tabs-title > a[aria-selected="true"] {
+	background: #EBD4E2;
+	color: #9C6888;
+	font-weight: bold;
+}
