@@ -46,8 +46,21 @@
 $global-width: rem-calc(1200);
 $global-font-size: 100%;
 $global-lineheight: 1.5;
-$primary-color: #7B7D7F;
-$secondary-color: #777;
+//$primary-color: #7B7D7F;
+//$secondary-color: #777;
+
+$primary-color: #C797AA;
+$secondary-color: #A96A83; // darker
+$tertiary-color: #8D4561; // darkest
+$lighter-secondary-color: #E2C4CF; // lighter
+$lighter-tertiary-color: #E2C4CF; // lightest
+
+$cprimary-color: #BAD19F;
+$csecondary-color: #93B170; // darker
+$ctertiary-color: #719449; // darkest
+$lighter-csecondary-color: #DDEBCC; // lighter
+$lighter-ctertiary-color: #F0F5EA; // lightest
+
 $success-color: #3adb76;
 $warning-color: #ffae00;
 $alert-color: #ec5840;

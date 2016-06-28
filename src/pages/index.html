@@ -4,26 +4,29 @@ description: Do managers have the jurisdiction and data required to control fish
 
 ---
 
-<div class="row jumbotron">
-	<div class="medium-6 columns">
-		<h2>{{description}}</h2>
-		<h3>yes!</h3>
-		<h4>The federal North Pacific Fishery Management Council governs fishing in a vast swath of oceans off Alaska. This jurisdiction encompasses the habitat for nearly all the fish harvested off Alaska.
-		</h4>
-	</div>
-	<div class="medium-6 columns">
-		<img src="{{root}}assets/img/us-alaska.png"  >
-		<label>Fishery Jurisdictions</label>
-	</div>
+<section class="row">
+	<div class="small-12 columns">
+	<div class="jumbotron row">
+		<div class="large-6 columns">
+			<h2>{{description}}</h2>
+			<h3>yes!</h3>
+			<h4>The federal North Pacific Fishery Management Council governs fishing in a vast swath of oceans off Alaska. This jurisdiction encompasses the habitat for nearly all the fish harvested off Alaska.
+			</h4>
+		</div>
+		<div class="large-6 columns">
+			<img src="{{root}}assets/img/us-alaska.png"  >
+			<label>Fishery Jurisdictions</label>
+		</div>
+	</div></div>
+</section> <!-- jumbotron -->
 
-</div> <!-- jumbotron -->
+<section class="row">
+	<div class="small-12 columns">
+		<div class="callout headline">
 
-<div class="row">
-	<div class="large-12 columns">
-		<div class="callout">
+	<p>The federal North Pacific Fishery Management Council governs fishing in a vast swath of oceans off Alaska. The 1,455,613-square-mile Exclusive Economic Zone (EEZ) here is more than 2x the combined EEZ off the US Pacific and Atlantic coasts. This jurisdiction encompasses the habitat for nearly all the fish harvested off Alaska. </p>
 
-	<p>The federal North Pacific Fishery Management Council governs fishing in a vast swath of oceans off Alaska. The 1,455,613-square-mile Exclusive Economic Zone (EEZ) here is more than 2x the combined EEZ off the US Pacific and Atlantic coasts. This jurisdiction encompasses the habitat for nearly all the fish harvested off Alaska.
-Within this territory, three questions underpin the work of keeping harvests sustainable:
+		<p>Within this territory, three questions underpin the work of keeping harvests sustainable:
 <ul>
 <li>How many fish are in the water? </li>
 <li>How many are being caught—by whom and where?</li>
@@ -47,12 +50,33 @@ Scientists, managers and the fishing industry invest heavily to answer those que
 		<li class="tabs-title"><a href="#panel4">Catch Accounting</a></li>
 		<li class="tabs-title"><a href="#panel5">Enforcement</a></li>
 	</ul>
-	<div class="tabs-content" data-tabs-content="example-tabs">
+	<div class="tabs-content" data-tabs-content="section-tabs">
 		<section class="tabs-panel is-active" id="panel1">
-			<p>Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus.</p>
+			<div class="row">
+				<div class="medium-6 columns">
+					<h3>How many fish are in the water?</h3>
+					<p>NOAA research ships and chartered fishing vessels conduct annual surveys of the Bering Sea and Gulf of Alaska, and biennial surveys in the Aleutians. This allows managers to adjust catch limits whenever necessary to keep fishing levels sustainable.</p>
+				</div>
+				<div class="medium-6 columns">
+					{{> p1-1}}
+				</div>
+			</div>
 		</section>
 		<section class="tabs-panel" id="panel2">
-			<p>Suspendisse dictum feugiat nisl ut dapibus.  Vivamus hendrerit arcu sed erat molestie vehicula. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor.  Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor.</p>
+			<div class="row">
+				<div class="medium-6 columns">
+			<h4>What’s coming out of the water? </h4>
+			<p>Monitoring what comes up in the gear is key to effective resource conservation in the North Pacific. Observers (left) collect data on more than 90% of all groundfish tonnage harvested  in the Bering Sea and Aleutian Islands (BSAI), producing the dense plot of data points at right.  Observers are trained, certified and managed by NOAA Fisheries to federal standards; vessel owners pay for the service to ensure their catches stay within authorized limits.</p>
+
+			<blockquote>“At the core of the North Pacific monitoring system is a comprehensive, industry-funded, on-board observer program, coupled with requirements for total weight measurement of most fish harvested. Used in conjunction with reporting and weighing requirements, the information collected by observers provides the foundation for in-season management and for tracking species-specific catch and bycatch amounts.” <cite>NPFMC</cite>
+			</blockquote>
+				</div>
+				<div class="medium-6 columns">
+					{{> p1-2}}
+
+					<span data-tooltip aria-haspopup="true" class="has-tip bottom" data-disable-hover="false" tabindex="2" title="<a href='http://www.afsc.noaa.gov/FMA/spatial_data.htm'>Observer data and map</a><br><a href='http://www.npfmc.org/observer-program/'>NPFMC on observer and catch-accounting systems</a>">References</span>
+				</div>
+			</div>
 		</section>
 		<section class="tabs-panel" id="panel3">
 			<p>Suspendisse dictum feugiat nisl ut dapibus.  Vivamus hendrerit arcu sed erat molestie vehicula. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor.  Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor.</p>
@@ -68,31 +92,5 @@ Scientists, managers and the fishing industry invest heavily to answer those que
 		</div>
 	</div>
 </div>
-<div class="row">
-	<div class="large-12 columns">
-		<div class="callout">
-			<h3>We&rsquo;re stoked you want to try Foundation! </h3>
-			<p>To get going, this file (index.html) includes some basic styles you can modify, play around with, or totally destroy to get going.</p>
-			<p>Once you've exhausted the fun in this document, you should check out:</p>
-			<div class="row">
-				<div class="large-4 medium-4 columns">
-					<p><a href="http://foundation.zurb.com/docs">Foundation Documentation</a><br />Everything you need to know about using the framework.</p>
-				</div>
-				<div class="large-4 medium-4 columns">
-					<p><a href="http://zurb.com/university/code-skills">Foundation Code Skills</a><br />These online courses offer you a chance to better understand how Foundation works and how you can master it to create awesome projects.</p>
-				</div>
-				<div class="large-4 medium-4 columns">
-					<p><a href="http://foundation.zurb.com/forum">Foundation Forum</a><br />Join the Foundation community to ask a question or show off your knowlege.</p>
-				</div>
-			</div>
-			<div class="row">
-				<div class="large-4 medium-4 medium-push-2 columns">
-					<p><a href="http://github.com/zurb/foundation">Foundation on Github</a><br />Latest code, issue reports, feature requests and more.</p>
-				</div>
-				<div class="large-4 medium-4 medium-pull-2 columns">
-					<p><a href="https://twitter.com/ZURBfoundation">@zurbfoundation</a><br />Ping us on Twitter if you have questions. When you build something with this we'd love to see it (and send you a totally boss sticker).</p>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
+
+

@@ -63,40 +63,45 @@ nav#simpletop {
 }
 
 h1.pagetitle {
-	color: rgba( 156, 104, 136, 0.9);
+	color: $primary-color;
 	font-weight: bold;
 	font-size: 28px;
-	margin-top: 8px;
+	margin: 8px auto;
 	font-variant: small-caps;
 }
 
-div.jumbotron {
-	background-color: #BA93AB;
+section.jumbotron, div.jumbotron {
+//	background-color: #BA93AB;
+//	background-color: #C14675; darkest
+//	background-color: #DF6E99; darker
+	background-color: $primary-color;
 	color: $white;
-	box-shadow: 0px 2px 4px rgba (0,0,0,0.5);
+	box-shadow: 0px 2px 4px rgba(0,0,0,0.5);
 	border-radius: 25px;
-	margin: 5px 20px 25px 20px;
+	margin: 10px auto;
+	padding: 16px;
 
-	h2 {
+	h2, h3, h4 {
 		text-align: center;
 		font-weight: bold;
+	}
+	h2 {
 	}
 
 	h3 {
-		text-align: center;
-		font-weight: bold;
 		text-transform: uppercase;
-	}
+		text-shadow: 1px 1px 4px rgba(0,0,0,0.5);	}
 
 	h4 {
-		color: #595858;
-		text-align: center;
+//		color: #595858;
 		font-size: 18px;
+//		font-weight: lighter;
+		text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
 	}
 
 	label {
 		color: $white;
-		texa-align: center;
+		text-align: center;
 		font-style: italic;
 	}
 
@@ -108,7 +113,38 @@ div.jumbotron {
 }
 
 .tabs-title > a:hover, .tabs-title > a:focus, .tabs-title > a[aria-selected="true"] {
-	background: #EBD4E2;
-	color: #9C6888;
+	background: $primary-color;
+	color: $tertiary-color;
 	font-weight: bold;
+}
+
+div.headline {
+	box-shadow: 0px -2px 14px rgba(0,0,0,0.25);
+	border: none;
+}
+
+section.row, footer.row {
+	padding: 16px;
+}
+
+footer.row {
+	background-color: $ctertiary-color;
+
+	h4 {
+		color: $lighter-ctertiary-color;
+		text-align: center;
+	}
+}
+
+.tabs-panel {
+	box-shadow: 0px -2px 14px rgba(0,0,0,0.25);
+
+	h3 {
+		color: $primary-color;
+	}
+
+}
+
+footer{
+
 }
