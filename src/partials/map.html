@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>index</title>
+	<meta charset="utf-8">
+	<meta name="generator" content="leafletR">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+	<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+
+	<style type="text/css">
+		body {
+			padding: 0;
+			margin: 0;
+		}
+		#wrapper{
+			height: 700px;
+			width: 900px;
+		}
+		#map-wrapper, #map{
+			height: 700px;
+			width: 700px;
+		}
+		#map {
+			z-index: 0;
+		}
+		.info {
+			padding: 6px 8px;
+			font: 14px/16px Georgia, Helvetica, sans-serif;
+			background: white;
+			background: rgba(255,255,255,0.8);
+			box-shadow: 0 0 15px rgba(0,0,0,0.2);
+			border-radius: 5px;
+			width: 400px;
+		}
+		.info p {
+			font-size: 1.1em;
+		}
+
+		.info h4 {
+			margin: 0 0 5px;
+			color: #777;
+			font-size: 1.1em
+		}
+
+		.info h1 {
+			font-size: 1.25em;
+			margin-top: 0em;
+			margin-bottom: 0.75em;
+		}
+
+		.info h2 {
+			font-size: 1.1em;
+			font-style: italic;
+			font-weight: normal;
+			margin-top: 0em;
+			margin-bottom: 0.25em;
+		}
+
+
+		.toggle-btn-grp {
+			margin:1px 0;
+			position: relative;
+			bottom: 15%;
+			width: 100%;
+			text-align:center;
+			margin:auto;
+			z-index: 1;
+		}
+		.toggle-btn {
+			padding:0.4em 1em;
+			color:#000;
+			background-color:#FFF;
+			border-radius:5px;
+			display:inline-block;
+			border:solid 1px #CCC;
+			cursor:pointer;
+			font: 16px/18px Georgia, Helvetica, sans-serif;
+		}
+
+
+
+		.toggle-btn-grp.joint-toggle .toggle-btn {
+			margin:1px 0;
+			border-radius:0;
+			border-right-color:white;
+		}
+
+
+		.toggle-btn:hover {
+			border:solid 1px #a0d5dc !important;
+			background:#f1fdfe;
+		}
+
+		.toggle-btn.top-row{
+			margin:auto;
+			width: 5%;
+			display:inline-block;
+			text-align:right;
+
+		}
+
+		.toggle-btn.bottom-row{
+			text-align:center;
+			width: 13%;
+
+		}
+
+		.toggle-btn.success {
+			background:lightgreen;
+			border:solid 1px green !important;
+		}
+
+		.visuallyhidden {
+			border: 0;
+			clip: rect(0 0 0 0);
+			height: 1px;
+			margin: -1px;
+			overflow: hidden;
+			padding: 0;
+			position: absolute;
+			width: 1px;
+		}
+		.overlap-btn{
+			margin: 3px 3px;
+			width: 300px;
+		}
+		.closures-btn{
+			margin:1px 0;
+			padding:0.4em 2em;
+			border-right-color:white;
+			padding:0.2em .5em;
+			color:#000;
+			background-color:#faf9f9;
+			display:inline-block;
+			border:solid 1px #CCC;
+			cursor:pointer;
+			font: 12px/14px Arial, Helvetica, sans-serif;
+		}
+		.closures-btn:hover {
+			border:solid 1px #a0d5dc !important;
+			background:#f1fdfe;
+		}
+		#test{
+			position: absolute;
+			top: 0;
+			margin-left: 705px;
+		}
+		.toggle-btn-grp.joint-toggle h1{
+			font-size: 1.5em;
+			margin-top: 0.2em;
+			margin-bottom: 0em;
+		}
+	</style>
+</head>
+<body>
+	<div id="wrapper">
+		<div id="map-wrapper">
+		<div id="map"></div>
+		<div class="toggle-btn-grp joint-toggle">
+			<label onclick="filterFun('all')" class="toggle-btn success bottom-row"><input type="radio" name="group3"/>All Closures</label>
+			<h1>Closed Areas by EBFM Principle:</h1>
+			<label onclick="filterFun('one')" class="toggle-btn top-row"><input type="radio" name="group3"/>1</label>
+			<label onclick="filterFun('two')" class="toggle-btn top-row"><input type="radio" name="group3"/>2</label>
+			<label onclick="filterFun('three')" class="toggle-btn top-row"><input type="radio" name="group3"/>3</label>
+			<label onclick="filterFun('four')" class="toggle-btn top-row"><input type="radio" name="group3"/>4</label>
+			<label onclick="filterFun('five')" class="toggle-btn top-row"><input type="radio" name="group3"/>5</label>
+			<label onclick="filterFun('six')" class="toggle-btn top-row"><input type="radio" name="group3"/>6</label>
+			<label onclick="filterFun('seven')" class="toggle-btn top-row"><input type="radio" name="group3"/>7</label>
+
+		</div>
+		</div>
+		</div>
+
+
+
+	<script type="text/javascript">
+		$(".toggle-btn:not('.noscript') input[type=radio]").addClass("visuallyhidden");
+		$(".toggle-btn:not('.noscript') input[type=radio]").change(function() {
+			if( $(this).attr("name") ) {
+				$(this).parent().addClass("success").siblings().removeClass("success")
+			} else {
+				$(this).parent().toggleClass("success");
+			}
+		});
+
+
+
+
+
+
+	</script>
+
+
+	<script src="{{root}}/assets/map/AK_closures.js"></script>
+	<script src="{{root}}/assets/map/closures_intersect.js"></script>
+	<script src="{{root}}/assets/map/Details.js"></script>
+
+
+	<script type="text/javascript">
+
+
+		var imageBounds = [[-4, -26], [37, 16]];
+
+		var map = L.map('map', {maxBounds: imageBounds,
+								minZoom: 4,
+								maxZoom: 6,
+								crs: L.CRS.Simple,
+								doubleClickZoom: false})
+								.fitBounds(imageBounds);
+
+		map.on({click: mapClick});
+
+		var baseImage = '{{root}}/assets/map/basemap.svg';
+
+		L.imageOverlay(baseImage, [[-50, -50], [50, 50]]).addTo(map);
+
+		var currentClosures = L.geoJson(dat, {
+				style: style1
+				}).addTo(map);
+
+		var hiddenLayer = L.geoJson(dat2, {
+				style: styleHidden,
+				onEachFeature: onEachFeature
+				}).addTo(map);
+
+
+
+		var info = L.control();
+
+		info.onAdd = function (map) {
+			this._div = L.DomUtil.create('div', 'info'); // create a div with a class "info"
+			this.update();
+			return this._div;
+		};
+
+		var pop = 99;   //keeps track of which info box the user is on
+		var props = "";
+		var lock = false;
+		var lock2 = false;
+		var prin = "all" ; // keeps track of what principle is being displayed
+
+		// method that we will use to update the control based on feature properties passed
+		info.update = function () {
+			this._div.innerHTML =   (!lock && pop==0?
+				'<h1>' + props.Label + '</h1><p><i>Established:</i> ' + props.Date + '<br style="line-height:1.75em;"/><i>Area:</i> ' + props.Area + ' km<sup>2</sup><br style="line-height:1.75em;"/><i>Drivers:</i> ' + props.Drivers + '</p>'
+
+				:lock && pop == 1?
+				'<h1>' + props.Label + '</h1><h2>History</h2>' + props.History + "<br/><br/><button onclick = \"infoChanger()\" type=\"button\">Click for References</button>"
+
+				:lock && pop == 2?
+				'<h1>' + props.Label + '</h1><h2>References</h2>' + props.References
+
+
+				: '<h4>Closures</h4>' + 'Hover over a closure for information <br/> Click once for History <br/> Click again for References');
+
+		};
+
+		info.addTo(map);
+
+
+		function infoChanger(){
+			lock2 = true;
+			if(pop == 0){
+				pop = 1;
+				info.update();
+			} else if(pop == 1){
+				pop = 2;
+				info.update();
+
+			}else {
+				pop = 0;
+				lock = false;
+				info.update();
+			}
+
+		}
+
+		function mapClick(e) {
+			if(!lock2){
+				filterFun(prin);
+
+				lock = false;
+				pop = 99;
+				info.update();
+			}
+			lock2 = false;
+			}
+
+
+		var DBID = "";
+
+		//Highlight on mouseover
+		function highlightFeature(e) {
+			if(!lock){
+				var layer = e.target;
+
+				DBID = layer.feature.properties[prin];
+
+
+				var match = currentClosures.eachLayer(function(layer) {
+					if (layer.feature.properties.DBID == DBID) {
+						layer.setStyle(style2());
+						}
+					});
+
+
+
+				if (!L.Browser.ie && !L.Browser.opera) {
+					layer.bringToFront();
+				}
+
+				for(var i = 0; i < details.data.length; i++) {
+					if(details.data[i].DBID == DBID) {
+						props = details.data[i] ;
+						pop = 0;
+						info.update();
+						}
+					}
+			}
+
+
+		}
+
+		//Reset highlightFeature
+		function resetHighlight(e) {
+
+			if(!lock){
+				currentClosures.setStyle(currentClosures.options.style);
+				pop=99;
+				info.update();
+			}
+
+		}
+
+
+
+
+		// Function when a polygon is clicked
+		function clickFun(e){
+				var layer = e.target;
+
+
+
+				if(layer.feature.properties[prin] == DBID){
+
+					currentClosures.setStyle(currentClosures.options.style);
+
+					DBID = layer.feature.properties[prin] ;
+
+
+					var match = currentClosures.eachLayer(function(layer) {
+						if (layer.feature.properties.DBID == DBID) {
+							layer.setStyle(style2());
+							}
+						});
+
+					for(var i = 0; i < details.data.length; i++) {
+						if(details.data[i].DBID == DBID) {
+							props = details.data[i] ;
+							}
+						}
+					lock = true;
+					if(pop == 0){
+						pop = 1;
+						info.update();
+					} else if(pop == 1){
+						pop = 2;
+						info.update();
+
+					}else {
+						pop = 0;
+						lock = false;
+						info.update();
+					}
+
+				} else{
+					lock = false;
+					currentClosures.setStyle(currentClosures.options.style);
+					pop = 99;
+					info.update();
+					}
+
+
+			}
+
+
+
+		// onEachFeature
+		function onEachFeature(feature, layer) {
+				layer.on({
+					mouseover: highlightFeature,
+					mouseout: resetHighlight,
+					click: clickFun
+				});
+		}
+
+
+
+		// stylings
+
+
+		//Default style
+		function style1(feature) {
+			return {
+				fillColor: "",
+				weight: 1.25,
+				fillOpacity: 0.1,
+				color: "#000"
+
+
+			};
+		}
+
+		//Highlight style
+		function style2(feature) {
+			return {
+				weight: 7,
+				fillOpacity: 0.90,
+				color: "#045a8d",
+				fillColor: "#666"
+
+
+			};
+		}
+
+		// Hidden style
+		function styleHidden(feature){
+			return {
+				weight: 0,
+				fillOpacity: 0,
+
+			};
+
+		}
+
+
+	// Filter function
+		function filterFun(principle) {
+			map.removeLayer(currentClosures);
+			map.removeLayer(hiddenLayer);
+
+			prin = principle;
+
+			if (principle == "all") {
+				currentClosures = L.geoJson(dat, {
+					style: style1,
+					}).addTo(map);
+
+				hiddenLayer = L.geoJson(dat2, {
+					style: styleHidden,
+					onEachFeature: onEachFeature
+					}).addTo(map);
+			} else{
+
+				currentClosures = L.geoJson(dat, {
+					style: style1,
+					filter: function(feature) {return feature.properties[principle] == 1 ? true: false;}
+					}).addTo(map);
+
+				hiddenLayer = L.geoJson(dat2, {
+					style: styleHidden,
+					filter: function(feature) {return feature.properties[principle] >0 ? true: false;},
+					onEachFeature: onEachFeature
+					}).addTo(map);
+
+
+				}
+		}
+
+
+
+	</script>
+</body>
+</html>

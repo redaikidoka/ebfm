@@ -62,12 +62,18 @@ nav#simpletop {
 
 }
 
+/* Generic header declaration */
+h1, h2, h3, h4, h5 {
+	color: $secondary-color;
+}
+
+/* Page Title */
 h1.pagetitle {
 	color: $primary-color;
 	font-weight: bold;
 	font-size: 28px;
-	margin: 8px auto;
 	font-variant: small-caps;
+	margin: 8px 0 -12px 8px;
 }
 
 section.jumbotron, div.jumbotron {
@@ -84,7 +90,9 @@ section.jumbotron, div.jumbotron {
 	h2, h3, h4 {
 		text-align: center;
 		font-weight: bold;
+		color: $white;
 	}
+
 	h2 {
 	}
 
@@ -94,6 +102,7 @@ section.jumbotron, div.jumbotron {
 
 	h4 {
 //		color: #595858;
+		color: black;
 		font-size: 18px;
 //		font-weight: lighter;
 		text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
@@ -103,6 +112,8 @@ section.jumbotron, div.jumbotron {
 		color: $white;
 		text-align: center;
 		font-style: italic;
+		display: block;
+		background-color: rgba(0,0,0,0.3);
 	}
 
 	img {
@@ -129,6 +140,8 @@ section.row, footer.row {
 
 footer.row {
 	background-color: $ctertiary-color;
+	margin-top: 24px;
+	padding: 14px;
 
 	h4 {
 		color: $lighter-ctertiary-color;
@@ -145,6 +158,27 @@ footer.row {
 
 }
 
+div.tab-toolbar-container {
+	visibility: hidden;
+}
 footer{
 
 }
+
+/* LANDING PAGE */
+body#landing {
+
+	section.row.landing {
+		padding: 0;
+		margin: 0px 0 16px 0;
+
+		img.bg {
+			z-index: -1;
+			width:100%;
+		}
+
+	}
+
+
+
+	}
