@@ -60,6 +60,18 @@ nav#simpletop {
 		font-size: $menu-font-size;
 	}
 
+	.menu li a {
+		text-decoration: overline;
+	}
+
+	.menu li ul li a {
+		text-decoration: none;
+	}
+
+	.menu li a:hover {
+		text-decoration: none;
+	}
+
 }
 
 /* Generic header declaration */
@@ -98,14 +110,17 @@ section.jumbotron, div.jumbotron {
 
 	h3 {
 		text-transform: uppercase;
-		text-shadow: 1px 1px 4px rgba(0,0,0,0.5);	}
+		text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+		color: $black;
+	}
+
 
 	h4 {
-//		color: #595858;
-		color: black;
-		font-size: 18px;
+		color: $white;
+		font-size: 20px;
+		line-height: 32px;
 //		font-weight: lighter;
-		text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+//		text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
 	}
 
 	label {
@@ -123,10 +138,20 @@ section.jumbotron, div.jumbotron {
 	}
 }
 
+.tabs-title {
+	border-right: 1px solid $lighter-tertiary-color;
+}
+.tabs-title > a {
+	font-size: rem-calc(15);
+	padding: 20px 12px;
+	text-decoration: none;
+}
 .tabs-title > a:hover, .tabs-title > a:focus, .tabs-title > a[aria-selected="true"] {
 	background: $primary-color;
-	color: $tertiary-color;
+	color: $white;
 	font-weight: bold;
+	font-variant: small-caps;
+	font-size: rem-calc(16);
 }
 
 div.headline {
@@ -161,6 +186,22 @@ footer.row {
 div.tab-toolbar-container {
 	visibility: hidden;
 }
+
+.tabs-content > img {
+	width: 100%;
+
+}
+
+label.figurecaption {
+		color: $white;
+		text-align: center;
+		font-style: italic;
+		display: block;
+		background-color: rgba(0,0,0,0.3);
+	margin-bottom: 12px;
+
+}
+
 footer{
 
 }

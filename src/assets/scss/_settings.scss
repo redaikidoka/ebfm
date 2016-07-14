@@ -49,6 +49,19 @@ $global-lineheight: 1.5;
 //$primary-color: #7B7D7F;
 //$secondary-color: #777;
 
+$primary-color: #6D898E;
+$secondary-color: #4D7178; // darker
+$tertiary-color: #335D65; // darkest
+$lighter-secondary-color: #96A8AB; // lighter
+$lighter-tertiary-color: #CDD5D7; // lightest
+
+$cprimary-color: #E6CAAF;
+$csecondary-color: #C39E7B; // darker
+$ctertiary-color: #A37950; // darkest
+$lighter-csecondary-color: #FFEEDE; // lighter
+$lighter-ctertiary-color: #FFF9F3; // lightest
+
+/*
 $primary-color: #C797AA;
 $secondary-color: #A96A83; // darker
 $tertiary-color: #8D4561; // darkest
@@ -60,13 +73,14 @@ $csecondary-color: #93B170; // darker
 $ctertiary-color: #719449; // darkest
 $lighter-csecondary-color: #DDEBCC; // lighter
 $lighter-ctertiary-color: #F0F5EA; // lightest
+*/
 
 $success-color: #3adb76;
 $warning-color: #ffae00;
 $alert-color: #ec5840;
 $light-gray: #e6e6e6;
 $medium-gray: #cacaca;
-$dark-gray: #8a8a8a;
+$dark-gray: #5a5a5a;
 $black: #0a0a0a;
 $white: #fff;
 $body-background: #F7F7F7;
@@ -144,8 +158,8 @@ $code-background: $light-gray;
 $code-border: 1px solid $medium-gray;
 $code-padding: rem-calc(2 5 1);
 $anchor-color: $primary-color;
-$anchor-color-hover: #9C6888;
-$anchor-text-decoration: none;
+$anchor-color-hover: $ctertiary-color; // customized
+$anchor-text-decoration: underline;
 $anchor-text-decoration-hover: none;
 $hr-width: $global-width;
 $hr-border: 1px solid $medium-gray;
@@ -160,7 +174,7 @@ $defnlist-margin-bottom: 1rem;
 $defnlist-term-weight: $global-weight-bold;
 $defnlist-term-margin-bottom: 0.3rem;
 $blockquote-color: $dark-gray;
-$blockquote-padding: rem-calc(9 20 0 19);
+$blockquote-padding: rem-calc(9 40 0 19);
 $blockquote-border: 1px solid $medium-gray;
 $cite-font-size: rem-calc(13);
 $cite-color: $dark-gray;
@@ -381,7 +395,7 @@ $menu-margin-nested: 1rem;
 $menu-item-padding: 0.7rem 1rem;
 $menu-icon-spacing: 0.25rem;
 $menu-expand-max: 6;
-$menu-font-size: rem-calc(14);
+$menu-font-size: rem-calc(15);
 
 // 23. Off-canvas
 // --------------
