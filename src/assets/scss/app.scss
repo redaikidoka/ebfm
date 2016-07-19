@@ -43,6 +43,7 @@
 @include motion-ui-animations;
 
 nav#simpletop {
+
 	background-color: $white ;
 	margin: 0;
 	width: 100%;
@@ -53,11 +54,13 @@ nav#simpletop {
 		width: 15rem;
 	}
 	.menu > li {
-		line-height: calc-rem(17);
+		line-height: calc-rem(22);
+
 	}
 	.menu > li > a {
 		font-weight: bold;
 		font-size: $menu-font-size;
+		line-height: calc-rem(30);
 	}
 
 	.menu li a {
@@ -83,15 +86,13 @@ h1, h2, h3, h4, h5 {
 h1.pagetitle {
 	color: $primary-color;
 	font-weight: bold;
-	font-size: 28px;
+	font-size: calc-rem(20);
 	font-variant: small-caps;
 	margin: 8px 0 -12px 8px;
+	font-family: 'Lora', serif;
 }
 
 section.jumbotron, div.jumbotron {
-//	background-color: #BA93AB;
-//	background-color: #C14675; darkest
-//	background-color: #DF6E99; darker
 	background-color: $primary-color;
 	color: $white;
 	box-shadow: 0px 2px 4px rgba(0,0,0,0.5);
@@ -103,6 +104,7 @@ section.jumbotron, div.jumbotron {
 		text-align: center;
 		font-weight: bold;
 		color: $white;
+		font-family: 'Lora', serif;
 	}
 
 	h2 {
@@ -126,15 +128,17 @@ section.jumbotron, div.jumbotron {
 	label {
 		color: $white;
 		text-align: center;
-		font-style: italic;
+//		font-style: italic;
 		display: block;
 		background-color: rgba(0,0,0,0.3);
+		font-family: 'Lora', serif;
+
 	}
 
 	img {
 		width: 100%;
 		margin-top: 10px;
-		border-radius: 15px;
+//		border-radius: 15px;
 	}
 }
 
@@ -145,12 +149,14 @@ section.jumbotron, div.jumbotron {
 	font-size: rem-calc(15);
 	padding: 20px 12px;
 	text-decoration: none;
+	font-variant: small-caps;
+	font-weight: bold;
 }
 .tabs-title > a:hover, .tabs-title > a:focus, .tabs-title > a[aria-selected="true"] {
 	background: $primary-color;
 	color: $white;
-	font-weight: bold;
-	font-variant: small-caps;
+//	font-weight: bold;
+
 	font-size: rem-calc(16);
 }
 
@@ -181,6 +187,11 @@ footer.row {
 		color: $primary-color;
 	}
 
+		img {
+		width: 100%;
+		margin-top: 10px;
+//		border-radius: 15px;
+	}
 }
 
 div.tab-toolbar-container {
@@ -195,9 +206,9 @@ div.tab-toolbar-container {
 label.figurecaption {
 		color: $white;
 		text-align: center;
-		font-style: italic;
+//		font-style: italic;
 		display: block;
-		background-color: rgba(0,0,0,0.3);
+		background-color: rgba(0,0,0,0.5);
 	margin-bottom: 12px;
 
 }
