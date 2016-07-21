@@ -1,8 +1,9 @@
 @charset 'utf-8';
-
 @import 'settings';
 @import 'foundation';
 @import 'motion-ui';
+@import 'components/nav';
+@import 'landing';
 
 @include foundation-global-styles;
 @include foundation-grid;
@@ -38,199 +39,139 @@
 @include foundation-title-bar;
 @include foundation-tooltip;
 @include foundation-top-bar;
-
 @include motion-ui-transitions;
 @include motion-ui-animations;
 
-nav#simpletop {
 
-	background-color: $white ;
-	margin: 0;
-	width: 100%;
-	max-width: 100%;
-	.dropdown.menu .submenu{
-		border: none !important;
-		box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.5) ;
-		width: 15rem;
-	}
-	.menu > li {
-		line-height: calc-rem(22);
-
-	}
-	.menu > li > a {
-		font-weight: bold;
-		font-size: $menu-font-size;
-		line-height: calc-rem(30);
-	}
-
-	.menu li a {
-		text-decoration: overline;
-	}
-
-	.menu li ul li a {
-		text-decoration: none;
-	}
-
-	.menu li a:hover {
-		text-decoration: none;
-	}
-
-}
 
 /* Generic header declaration */
+
 h1, h2, h3, h4, h5 {
-	color: $secondary-color;
+    color: $secondary-color;
 }
+
 
 /* Page Title */
+
 h1.pagetitle {
-	color: $primary-color;
-	font-weight: bold;
-	font-size: calc-rem(20);
-	font-variant: small-caps;
-	margin: 8px 0 -12px 8px;
-	font-family: 'Lora', serif;
+    color: $primary-color;
+    font-weight: bold;
+    font-size: calc-rem(20);
+    font-variant: small-caps;
+    margin: 8px 0 -12px 8px;
+    font-family: 'Lora', serif;
 }
 
-section.jumbotron, div.jumbotron {
-	background-color: $primary-color;
-	color: $white;
-	box-shadow: 0px 2px 4px rgba(0,0,0,0.5);
-	border-radius: 25px;
-	margin: 10px auto;
-	padding: 16px;
-
-	h2, h3, h4 {
-		text-align: center;
-		font-weight: bold;
-		color: $white;
-		font-family: 'Lora', serif;
-	}
-
-	h2 {
-	}
-
-	h3 {
-		text-transform: uppercase;
-		text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
-		color: $black;
-	}
-
-
-	h4 {
-		color: $white;
-		font-size: 20px;
-		line-height: 32px;
-//		font-weight: lighter;
-//		text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
-	}
-
-	label {
-		color: $white;
-		text-align: center;
-//		font-style: italic;
-		display: block;
-		background-color: rgba(0,0,0,0.3);
-		font-family: 'Lora', serif;
-
-	}
-
-	img {
-		width: 100%;
-		margin-top: 10px;
-//		border-radius: 15px;
-	}
+section.jumbotron,
+div.jumbotron {
+    background-color: $primary-color;
+    color: $white;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+    border-radius: 25px;
+    margin: 10px auto;
+    padding: 16px;
+    h2,
+    h3,
+    h4 {
+        text-align: center;
+        font-weight: bold;
+        color: $white;
+        font-family: 'Lora', serif;
+    }
+    h3 {
+        text-transform: uppercase;
+        text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+        color: $black;
+    }
+    h4 {
+        color: $white;
+        font-size: 20px;
+        line-height: 32px;
+        //        font-weight: lighter;
+        //        text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+    }
+    label {
+        color: $white;
+        text-align: center;
+        //        font-style: italic;
+        display: block;
+        background-color: rgba(0, 0, 0, 0.3);
+        font-family: 'Lora', serif;
+    }
+    img {
+        width: 100%;
+        margin-top: 10px;
+        //        border-radius: 15px;
+    }
 }
 
 .tabs-title {
-	border-right: 1px solid $lighter-tertiary-color;
+    border-right: 1px solid $lighter-tertiary-color;
 }
-.tabs-title > a {
-	font-size: rem-calc(15);
-	padding: 20px 12px;
-	text-decoration: none;
-	font-variant: small-caps;
-	font-weight: bold;
-}
-.tabs-title > a:hover, .tabs-title > a:focus, .tabs-title > a[aria-selected="true"] {
-	background: $primary-color;
-	color: $white;
-//	font-weight: bold;
 
-	font-size: rem-calc(16);
+.tabs-title > a {
+    font-size: rem-calc(15);
+    padding: 20px 12px;
+    text-decoration: none;
+    font-variant: small-caps;
+    font-weight: bold;
+}
+
+.tabs-title > a:hover,
+.tabs-title > a:focus,
+.tabs-title > a[aria-selected="true"] {
+    background: $primary-color;
+    color: $white;
+    //    font-weight: bold;
+    font-size: rem-calc(16);
 }
 
 div.headline {
-	box-shadow: 0px -2px 14px rgba(0,0,0,0.25);
-	border: none;
+    box-shadow: 0px -2px 14px rgba(0, 0, 0, 0.25);
+    border: none;
 }
 
-section.row, footer.row {
-	padding: 16px;
+section.row,
+footer.row {
+    padding: 16px;
 }
 
 footer.row {
-	background-color: $ctertiary-color;
-	margin-top: 24px;
-	padding: 14px;
-
-	h4 {
-		color: $lighter-ctertiary-color;
-		text-align: center;
-	}
+    background-color: $ctertiary-color;
+    margin-top: 24px;
+    padding: 14px;
+    h4 {
+        color: $lighter-ctertiary-color;
+        text-align: center;
+    }
 }
 
 .tabs-panel {
-	box-shadow: 0px -2px 14px rgba(0,0,0,0.25);
-
-	h3 {
-		color: $primary-color;
-	}
-
-		img {
-		width: 100%;
-		margin-top: 10px;
-//		border-radius: 15px;
-	}
+    box-shadow: 0px -2px 14px rgba(0, 0, 0, 0.25);
+    h3 {
+        color: $primary-color;
+    }
+    img {
+        width: 100%;
+        margin-top: 10px;
+        //        border-radius: 15px;
+    }
 }
 
 div.tab-toolbar-container {
-	visibility: hidden;
+    visibility: hidden;
 }
 
 .tabs-content > img {
-	width: 100%;
-
+    width: 100%;
 }
 
 label.figurecaption {
-		color: $white;
-		text-align: center;
-//		font-style: italic;
-		display: block;
-		background-color: rgba(0,0,0,0.5);
-	margin-bottom: 12px;
-
+    color: $white;
+    text-align: center;
+    //        font-style: italic;
+    display: block;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin-bottom: 12px;
 }
 
-footer{
-
-}
-
-/* LANDING PAGE */
-body#landing {
-
-	section.row.landing {
-		padding: 0;
-		margin: 0px 0 16px 0;
-
-		img.bg {
-			z-index: -1;
-			width:100%;
-		}
-
-	}
-
-
-
-	}

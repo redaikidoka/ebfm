@@ -1,0 +1,27 @@
+
+/* LANDING PAGE */
+
+body#landing {
+    section.row.landing {
+        padding: 0;
+        margin: 0px 0 16px 0;
+        img.bg {
+            z-index: -1;
+            width: 100%;
+        }
+    }
+
+    img.rounder {
+        border-radius: rem-calc(100);
+    }
+
+    div.thumbnail > h4 {
+        margin-top: -40px;
+        margin-left: 4px;
+        text-align: left;
+         a {
+            background-color:rgba(255,255,255, 0.8);
+            padding: 4px;
+        }
+    }
+}

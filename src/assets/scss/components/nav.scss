@@ -1,0 +1,29 @@
+
+nav#simpletop {
+    background-color: $white;
+    margin: 0;
+    width: 100%;
+    max-width: 100%;
+    .dropdown.menu .submenu {
+        border: none !important;
+        box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.5);
+        width: 15rem;
+    }
+    .menu > li {
+        line-height: calc-rem(22);
+    }
+    .menu > li > a {
+        font-weight: bold;
+        font-size: $menu-font-size;
+        line-height: calc-rem(30);
+    }
+    .menu li a {
+        text-decoration: overline;
+    }
+    .menu li ul li a {
+        text-decoration: none;
+    }
+    .menu li a:hover {
+        text-decoration: none;
+    }
+}
