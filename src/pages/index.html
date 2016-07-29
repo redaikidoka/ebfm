@@ -28,54 +28,48 @@ description: How North Pacific Managers sustain America's most prolific fisherie
    <div class="row callout">
 <!--      <div class="columns large-6">-->
          <h3>The Seven Principles</h3>
-         <div class="media-object stack-for-small">
-            <div class="media-object-section">
-               <div class="thumbnail">
-                  <a href="{{root}}/principle1.html"> <img src="{{root}}assets/img/sml/sqr_p1.jpg"> </a>
-               </div>
-            </div>
-            <div class="media-object-section">
-               <h4 class=""><a href="{{root}}/principle1.html"> Principle 1</a></h4>
-               <p class="lead">Do managers have the jurisdiction and data required to control fisheries that affect the ecosystem?</p>
-            </div>
-         </div>
-
-         <div class="media-object stack-for-small">
-            <div class="media-object-section ">
-               <div class="thumbnail">
-                  <a href="{{root}}/principle2.html"> <img src="{{root}}assets/img/sml/sqr_p2.jpg"> </a>
-
-               </div>
-
-            </div>
-            <div class="media-object-section">
-               <h4 class=""><a  href="{{root}}/principle2.html">Principle 2</a></h4>
-               <p class="lead">Do managers prevent overfishing on both target and non-target species?</p>
-            </div>
-         </div>
-         <div class="media-object stack-for-small">
-            <div class="media-object-section">
-               <div class="thumbnail">
-                  <a href="{{root}}/principle3.html"> <img src="{{root}}assets/img/sml/sqr_p3.jpg"> </a>
-               </div>
-            </div>
-            <div class="media-object-section">
-               <h4 class=" "><a href="{{root}}/principle3.html">Principle 3</a></h4>  <p class="lead" >Do managers protect habitats and life on the seafloor?</p>
-            </div>
-         </div>
-         <div class="media-object stack-for-small">
-            <div class="media-object-section">
-              <div class="thumbnail">
-               <a href="{{root}}/principle4.html"> <img src="{{root}}assets/img/sml/sqr_p4.jpg"> </a>
-               </div>
-            </div>
-
-              <div class="media-object-section">
-                <h4 class=" "><a href="{{root}}/principle4.html">Principle 4</a></h4>
-
-               <p class="lead">Do managers protect non-fish species from fishing impacts?</p>
-            </div>
-         </div>
+         {{> index-principle-item
+            title="Principle 1"
+            lead="Do managers have the jurisdiction and data required to control fisheries that affect the ecosystem?"
+            link="principle1.html"
+            img="sqr_p1.jpg"
+         }}
+         {{> index-principle-item
+            title="Principle 2"
+            lead="Do managers prevent overfishing on both target and non-target species?"
+            link="principle2.html"
+            img="sqr_p2.jpg"
+         }}
+         {{> index-principle-item
+            title="Principle 3"
+            lead="Do managers protect habitats and life on the seafloor?"
+            link="principle3.html"
+            img="sqr_p3.jpg"
+         }}
+         {{> index-principle-item
+            title="Principle 4"
+            lead="Do managers protect non-fish species from fishing impacts?"
+            link="principle4.html"
+            img="sqr_p4.jpg"
+         }}
+         {{> index-principle-item
+            title="Principle 5"
+            lead="Do managers limit fishing effects on marine foodwebs?"
+            link="principle5.html"
+            img="sqr_p5.jpg"
+         }}
+         {{> index-principle-item
+            title="Principle 6"
+            lead="Do managers adjust fishing rules when environmental change affects stocks?"
+            link="principle6.html"
+            img="sqr_p6.jpg"
+         }}
+         {{> index-principle-item
+            title="Principle 7"
+            lead="Do managers consider social and economic needs?"
+            link="principle7.html"
+            img="sqr_p7.jpg"
+         }}
       </div><!-- PRINCIPLES row -->
 
       <div class="row callout">
@@ -89,5 +83,3 @@ description: How North Pacific Managers sustain America's most prolific fisherie
 </section>
 
 {{> footer-home}}
-
-
