@@ -8,7 +8,28 @@ body#landing {
         img.bg {
             z-index: -1;
             width: 100%;
+           clear: none;
+           margin: 0;
         }
+
+//       h3 {
+//         font-family: 'Raleway', sans-serif;
+////         margin-bottom: - rem-calc(40);
+//          font-size: rem-calc(36);
+//          color: $black;
+//          z-index: 100;
+//          float: left;
+//          clear: none;
+//          display: inline;
+//       }
+//
+//       h4 {
+//         font-family: 'Raleway', sans-serif;
+//          font-size: rem-calc(52);
+//         margin-top: - rem-calc(60);
+//         text-align: right;
+//          color: $white;
+//       }
     }
 
     img.rounder {
