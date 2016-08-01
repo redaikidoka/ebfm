@@ -27,7 +27,12 @@
             <div class="large-5 columns">
                <h2>{{description}}</h2>
                <h3>yes</h3>
-               <h4>{{explanation}}</h4>
+               <h4>
+                 {{explanation}}
+                 {{^explanation}}
+                   Habitat protections cover more than 2.1 million km<sup>2</sup> in the North Pacific,  safeguarding seabed organisms and preventing harm.
+                 {{/explanation}}
+               </h4>
             </div>
             <div class="large-7 columns">
                <img src="{{root}}assets/img/{{jumboimage}}">
