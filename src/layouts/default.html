@@ -13,6 +13,7 @@
    <meta name="theme-color" content="#ffffff">
    <link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+   <link href="//cdn.rawgit.com/noelboss/featherlight/1.5.0/release/featherlight.min.css" type="text/css" rel="stylesheet" />
 </head>
 
 <body id="{{page}}">
@@ -28,10 +29,9 @@
                <h2>{{description}}</h2>
                <h3>yes</h3>
                <h4>
-                 {{explanation}}
-                 {{^explanation}}
+                 {{#if explanation}}
                    Habitat protections cover more than 2.1 million km<sup>2</sup> in the North Pacific,  safeguarding seabed organisms and preventing harm.
-                 {{/explanation}}
+                 {{/if}}
                </h4>
             </div>
             <div class="large-7 columns">
@@ -43,6 +43,8 @@
    </section>
 
    {{> body}} {{> footer}}
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+   <script src="//cdn.rawgit.com/noelboss/featherlight/1.5.0/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
    <script src="{{root}}assets/js/app.js"></script>
 </body>
 
