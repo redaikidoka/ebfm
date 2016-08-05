@@ -181,3 +181,41 @@ a.references {
    float: right;
 }
 
+// For Videos
+
+.videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+.videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+// For images same height
+.row-img {
+   display: flex;
+   .img-aleutian {
+      flex: 1.29375;
+   }
+   .img-texas {
+      flex: 1.1291;
+   }
+   .img-camera {
+      flex: 1.3;
+   }
+   .img-canyon {
+      flex: 1.5;
+   }
+   .img-modtrawl {
+      flex: 1.5737;
+   }
+   .img-footrope {
+      flex: 0.75;
+   }
+}
