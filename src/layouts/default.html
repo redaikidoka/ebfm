@@ -29,9 +29,12 @@
                <h2>{{description}}</h2>
                <h3>yes</h3>
                <h4>
-                 {{#if explanation}}
-                   Habitat protections cover more than 2.1 million km<sup>2</sup> in the North Pacific,  safeguarding seabed organisms and preventing harm.
-                 {{/if}}
+                  {{#if explanation}}
+                     {{ explanation }}
+                  {{/if}}
+                  {{^ explanation}}
+                     Habitat protections cover more than 2.1 million km<sup>2</sup> in the North Pacific,  safeguarding seabed organisms and preventing harm.
+                  {{/explanation}}
                </h4>
             </div>
             <div class="large-7 columns">
