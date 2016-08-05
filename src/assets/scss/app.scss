@@ -186,6 +186,14 @@ a.references {
    margin: 0;
 }
 
+.figurecaption {
+   cite {
+      color: $lighter-csecondary-color;
+      margin-right: 10px;
+      text-align: right;
+   }
+}
+
 /* For Responsive Videos */
 
 .videoWrapper {
@@ -246,6 +254,19 @@ a.references {
       }
       .img-alaskamap {
          flex: 1.2934;
+      }
+      //p7-4
+      .img-fishermen {
+         flex: 2.1325;
+      }
+      .img-villages {
+         flex: 1.3652;
+      }
+      .img-workers {
+         flex: 0.8262;
+      }
+      .img-salmoncamp {
+         flex: 1.3597;
       }
    }
 }
