@@ -25,16 +25,21 @@
    <div class="large-6 columns">
       <h3>How many fish are in the water?</h3>
       <p>NOAA research ships and chartered fishing vessels conduct annual surveys of the Bering Sea and Gulf of Alaska, and biennial surveys in the Aleutians. This allows managers to adjust catch limits whenever necessary to keep fishing levels sustainable.</p>
-
-      <img src="{{root}}assets/img/p1-1-ebs-slow.gif" alt="Space">
-      <label class="figurecaption">Survey Areas in the Eastern Bering Sea</label>
-
+      {{> image
+         img="p1-1-ebs-slow.gif"
+         caption="Survey Areas in the Eastern Bering Sea"
+      }}
    </div>
 
    <div class="large-6 columns">
-      <img class="orbit-image" src="{{root}}assets/img/p1-1-Cutter.jpg" alt="Space">
-      <label class="figurecaption">US Coast Guard Cutter</label>
-      <img class="orbit-image" src="{{root}}assets/img/p1-1-Dyson.jpg" alt="Space">
-      <label class="figurecaption">NOAA RV Oscar Dyson</label>
+      {{> image
+         img="p1-1-Cutter.jpg"
+         caption="US Coast Guard Cutter"
+      }}
+      {{> image
+         img="p1-1-Dyson.jpg"
+         caption="NOAA RV Oscar Dyson"
+         cite="NOAA"
+      }}
    </div>
 </div>

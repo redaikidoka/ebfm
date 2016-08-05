@@ -7,13 +7,16 @@
       </blockquote>
    </div>
    <div class="large-6 columns">
-
-      <img src="{{root}}assets/img/p1-2-harvest.png" alt="NOAA Certified Fisheries Observer">
-      <label class="figurecaption">NOAA Certified Fisheries Observer</label>
-
-      <img src="{{root}}assets/img/p1-2-harvestfish.png" alt="Groundfish Observer Data">
-      <label class="figurecaption">Groundfish Observer Data</label>
-
+      {{> image
+         img="p1-2-harvest.png"
+         caption="NOAA Certified Fisheries Observer"
+         cite="NOAA"
+      }}
+      {{> image
+         img="p1-2-harvestfish.png"
+         caption="Groundfish Observer Data"
+         cite="NOAA"
+      }}
 
       <p><a data-open="p12References" class="float-right">REFERENCES</a></p>
       <div class="reveal" id="p12References" data-reveal>
