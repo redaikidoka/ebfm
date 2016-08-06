@@ -145,6 +145,10 @@ footer.row {
         color: $lighter-ctertiary-color;
         text-align: center;
     }
+    p {
+      color: $lighter-csecondary-color;
+      margin-top: 1em;
+   }
 }
 
 .tabs-panel {
@@ -174,6 +178,11 @@ label.figurecaption {
     display: block;
     background-color: rgba(0, 0, 0, 0.5);
     margin-bottom: 12px;
+    cite {
+      color: $lighter-csecondary-color;
+      margin-right: 10px;
+      text-align: right;
+   }
 }
 
 a.references {
@@ -184,14 +193,6 @@ a.references {
 .no-decoration {
    list-style: none;
    margin: 0;
-}
-
-.figurecaption {
-   cite {
-      color: $lighter-csecondary-color;
-      margin-right: 10px;
-      text-align: right;
-   }
 }
 
 /* For Responsive Videos */
