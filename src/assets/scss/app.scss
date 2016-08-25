@@ -177,8 +177,8 @@ footer.row {
 	 }
 }
 
-.tabs-panel {
-		box-shadow: 0px -2px 14px rgba(0, 0, 0, 0.25);
+.detail {
+		// box-shadow: 0px -2px 14px rgba(0, 0, 0, 0.25);
 		h3 {
 				color: $primary-color;
 		}
@@ -247,6 +247,14 @@ a.references {
 @include breakpoint(medium large) {
 	 .row-img {
 			display: flex;
+
+			// p2-5
+			.img-goa {
+				flex: 1.89;
+			}
+			.img-bsai {
+				flex: 1.6;
+			}
 			// p3-1
 			.img-aleutian {
 				 flex: 1.29375;
@@ -294,6 +302,12 @@ a.references {
 			}
 			.img-salmoncamp {
 				 flex: 1.3597;
+			}
+			.img-snigaroff {
+				flex: 1.8962;
+			}
+			.img-aggregate {
+				flex: 1.5848;
 			}
 	 }
 }
