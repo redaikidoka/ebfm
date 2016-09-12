@@ -208,7 +208,7 @@ label.figurecaption {
 			color: $lighter-csecondary-color;
 			margin-right: 10px;
 			text-align: right;
-	 }
+	 	}
 }
 
 a.references {
@@ -224,6 +224,14 @@ a.references {
 .lightbox {
 	display: none;
 	min-width: 500px;
+}
+
+.jumboimage {
+	cite {
+		color: $lighter-csecondary-color;
+		margin-right: 10px;
+		text-align: right;
+ }
 }
 
 /* For Responsive Videos */
