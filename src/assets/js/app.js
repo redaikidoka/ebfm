@@ -4,6 +4,9 @@ function openTab(tab) {
   $("#example-tabs").foundation("selectTab", tab);
 }
 
+function moveToClosure() {
+  location='#closure';
+}
 // jQuery(document).ready(function($) {
 //         $(".rt01").attr('data-tabs',{
 //            "isAutoInit" : true,
