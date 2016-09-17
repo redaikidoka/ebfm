@@ -224,6 +224,10 @@ a.references {
 .lightbox {
 	display: none;
 	min-width: 500px;
+
+	img {
+		max-height: 85vh;
+	}
 }
 
 .jumboimage {
