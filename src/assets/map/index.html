@@ -244,7 +244,7 @@
 		// method that we will use to update the control based on feature properties passed
 		info.update = function () {
 			this._div.innerHTML =   (!lock && pop==0?
-				'<h1>' + props.Label + '</h1><p><i>Established:</i> ' + props.Date + '<br style="line-height:1.75em;"/><i>Area:</i> ' + props.Area + ' km<sup>2</sup><br style="line-height:1.75em;"/><i>Drivers:</i> ' + props.Drivers + '</p>'
+				'<h1>' + props.Label + '</h1><p><i>Established:</i> ' + props.Date + '<br style="line-height:1.75em;"/><i>Area:</i> ' + props.Area + ' km<sup>2</sup><br style="line-height:1.75em;"/><i>Purpose:</i> ' + props.Drivers + '</p>'
 				
 				:lock && pop == 1?
 				'<h1>' + props.Label + '</h1><h2>History</h2>' + props.History + "<br/><br/><button onclick = \"infoChanger()\" type=\"button\">Click for References</button>"
@@ -440,6 +440,10 @@
 		function filterFun(principle) {
 			map.removeLayer(currentClosures);
 			map.removeLayer(hiddenLayer);
+			
+			lock = false;
+			pop = 99;
+			info.update();
 			
 			prin = principle;
 		
