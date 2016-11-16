@@ -1,29 +1,36 @@
 ---
 
-layout: landing
 
-title: DEVELOPER INFORMATION FOR THE EBFM SITE
+title: DEVELOPER INFORMATION
 
-description: You can edit the site files directly but it's built with GULP.
+description: Can you edit the site files directly via ftp?
 
-mission: The website files are built with a little Foundation Bootstrapping project, and the graphs are in Tableau Public. Details below
+explanation: The website files are built with GULP with a little Foundation Bootstrapping project, and the graphs are in Tableau Public
+
+jumboimage: logo-mca-text.png
+jumboimagelabel: ooohhhhh
 
 ---
 
-<section class="expanded row landing">
-	 <img src="{{root}}assets/img/landing.jpg" alt="Conserving Alaska's Oceans in the 21st Century" class="bg">
-</section>
-
 <section class="row">
-	 <div class="row callout">
-<!--      <div class="columns large-6">-->
-				 <h3 id="principles">The Website Code  </h3>
-                 <p> The website code is on <a href="https://github.com/redaikidoka/ebfm" target="_blank">github</a>. There is a DOCUMENTATION.md markdown file that describes the project (in addition to basic setup in the readme.md)</p>
-
-                 <h3>The Graphs</h3>
-                 <p>The graphs all stream in from Tableau Public. You'll need a licensed copy of Tableau Desktop to update them. You can find the <a href="https://public.tableau.com/profile/pol.stafford#!/">Tableau Profile</a> that owns the workbook. </p>                 
-			</div><!-- dev info row -->
-
+	<div class="row callout">
+		<blockquote> The site is composed mostly of its website code, and graphs and charts hosted on Tableau Public. </blockquote>
+		<!--      <div class="columns large-6">-->
+		<h3 id="principles">The Website Code </h3>
+		<p> The website code is on <a href="https://github.com/redaikidoka/ebfm" target="_blank">github</a>. There is a DOCUMENTATION.md
+			markdown file that describes the project (in addition to basic setup in the readme.md)</p>
+		<ul>
+			<li>You <em>could</em> edit the html files in the ftp site directly, but I recommend grabbing this project and using the build
+				process instead - you'll have less work and end up with more awesome.</li>
+			<li>The readme.md in the project details the basucs of the ZURB template and how to get it installed. </li>
+			<li>The working.md file is a quick reminder of how to get the project going and how to update it as you go. :)</li>
+		</ul>
+		<h3>The Graphs</h3>
+		<p>The graphs all stream in from Tableau Public. You'll need a licensed copy of Tableau Desktop to update them. You can find
+			the <a href="https://public.tableau.com/profile/pol.stafford#!/">Tableau Profile</a> that owns the workbook. </p>
+		
+				<blockquote> The site access information, like ftp access, the accounts for hosted videos/etc., are held by MCA and <a href="smtp:wordworks9@earthlink.net">Warren & Co </a>. </blockquote>
+	</div>
+	<!-- dev info row -->
 </section>
 
-{{> footer-home}}
